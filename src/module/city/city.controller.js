@@ -12,25 +12,18 @@ class CityController {
         this.#service = cityService;
     }
     async createCity(req, res, next) {
-        try {
-            const errorValidator = validationResult(req);
-            if (!errorValidator) {
-                return res.status(HttpStatusCode.NotImplemented).json({
-                    statusCodes: HttpStatusCode.NotImplemented,
-                    message: errorValidator
-                });   
-            }
-           const {title,name,description,lat,lng,key}=req.body;
-           const result = await this.#service.createCity({title,name,description,lat,lng,key});
-           return res.json({
-            message:CityMessage.Created,
-            result:result
-           });
-
-        } catch (error) {
-            next(error);
-        }
+        const city = req.query.city;
+    
+        // Mock weather data, replace this with actual API call
+        const weather = {
+            city: city,
+            temperature: 25,
+            description: 'Sunny'
+        };
+    
+        res.render('paramter.ejs', { weather });
     }
+    
 
     async findMyCityANDShow(req, res, next) {
        try {
@@ -46,18 +39,15 @@ class CityController {
        }
     }
     async Addparamters(req, res, next) {
-        try {
-        const {id_paramters,nameCity}=req.body;
-        const result = await this.#service.Addparamters(id_paramters,nameCity);
+        const city = req.query.city;
+    
+        // Mock weather data, replace this with actual API call
+        const weather = {
+            city: city,
         
-        return res.json({
-            message : CityMessage.IdOfParameter,
-            result : result
-
-           });
-        } catch (error) {
-         next(error);
-        }
+        };
+    
+        res.render('input.ejs', { weather });
     }
     async showParameters(req, res, next) {
         try {

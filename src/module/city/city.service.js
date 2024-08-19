@@ -7,13 +7,10 @@ class CityService {
     #model;
     constructor () {
         autoBind(this);
-        this.#model =CityModel ;
+       // this.#model =CityModel ;
     }
     async createCity(dto) {
-        const check = await this.#model.findOne({name:dto.name});
-        if(!check) return createHttpError.NotAcceptable(CityMessage.AlreadyExist);
-        const result = await this.#model.create(dto);
-        return result._id.toString();
+        
     }
     async findMyCityANDShow(city) {
         return await  this.checkExistCity(city)

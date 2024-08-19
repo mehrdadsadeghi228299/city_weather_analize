@@ -1,8 +1,6 @@
-const winston = require("winston");
 
 function AllExceptionHandler(app) {
     app.use((err, req, res, next) => {
-         winston.error(err.message);
         if (typeof err === "string") {
             // custom application error
             return res.status(400).json({ message: err });

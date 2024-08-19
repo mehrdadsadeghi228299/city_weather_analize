@@ -1,11 +1,11 @@
 {
-  "name": "city_weather_analize",
+  "name": "weatheranalize",
   "version": "1.0.0",
   "description": "shop ing store",
   "main": "app.js",
   "scripts": {
-    "start": "node main.js",
-    "test": "nodemon main.js"
+    "start": "node app.js",
+    "test": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -16,11 +16,12 @@
   "dependencies": {
     "auto-bind": "^3.0.0",
     "axios": "^1.6.2",
+    "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "env": "^0.0.2",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "express-ejs-layouts": "^2.5.1",
     "express-validator": "^7.0.1",
     "http-codes": "^1.0.0",
