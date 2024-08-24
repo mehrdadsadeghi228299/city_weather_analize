@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Map</title>
+    <style>
+        /* Set the size of the map */
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>City Map</h3>
+    <div id="map"></div>
+
+    <!-- Load the Google Maps API library -->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD13MHTGnFhb4xunHvIzYxMileGjMkqAuY&callback=initMap">
+    </script>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of the city (e.g., New York)
+            const city = { lat: 29.591768, lng: 52.583698 }; // Coordinates for New York City
+
+            // The map, centered at the city
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: city,
+            });
+
+            // Optional: Add a marker at the center
+            const marker = new google.maps.Marker({
+                position: city,
+                map: map,
+            });
+        }
+    </script>
+</body>
+</html>

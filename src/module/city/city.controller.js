@@ -49,6 +49,15 @@ class CityController {
     
         res.render('input.ejs', { weather });
     }
+    async menu(req,res,next){
+        res.render('menu.ejs');
+    }
+    async map(req,res,next){
+        res.render('map.ejs');
+    }
+    async plot(req,res,next){
+        res.render('plot.ejs');
+    }
     async showParameters(req, res, next) {
         try {
             const city=req.body.city;

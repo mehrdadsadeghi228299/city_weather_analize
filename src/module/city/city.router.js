@@ -4,6 +4,9 @@ const router = require('express').Router();
 
 router.get("/city",cityController.createCity);
 router.get("/add-paramter",cityController.Addparamters);
+router.get("/menu",cityController.menu);
+router.get("/map",cityController.map);
+router.get("/plot",cityController.plot);
 
 /*router.get("/find-city/:city",Authorization,CheckRole('admin','updater'),cityController.findMyCityANDShow);
 router.put("/add-paramter",Authorization,CheckRole('admin','updater','creator'),cityController.Addparamters);

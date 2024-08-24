@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #6f0303;
+    overflow: hidden;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    padding: 14px 20px;
+}
+
+.nav-item a {
+    color: rgb(179, 244, 173);
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-item a:hover {
+    background-color: #575757;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .nav-list {
+        flex-direction: column;
+    }
+}
