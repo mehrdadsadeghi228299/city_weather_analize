@@ -58,6 +58,9 @@ class CityController {
     async plot(req,res,next){
         res.render('plot.ejs');
     }
+    async earts(req,res,next){
+        res.render('earts.ejs');
+    }
     async showParameters(req, res, next) {
         try {
             const city=req.body.city;

@@ -1,0 +1,31 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Google Maps</title>
+    <link rel="stylesheet" href="/css/earts.css">
+    <script src="https://earth.google.com/earth/d/12F09YjbsvM7lrIT3X7PqlPdnEHgW7lN-?usp=sharing" async defer></script>
+    <script>
+        function initMap() {
+            const location = { lat: 29.591768, lng: 52.583698 }; // Example coordinates
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: location,
+                zoom: 8,
+                mapTypeId: 'shiraz'
+            });
+
+            new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Embedded Google Maps with Satellite View</h1>
+    <div id="map" class="map-container"></div>
+</body>
+</html>
