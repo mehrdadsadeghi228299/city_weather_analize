@@ -2,8 +2,8 @@ const cityController = require('./city.controller');
 
 const router = require('express').Router();
 
-router.get("/city",cityController.createCity);
-router.get("/add-paramter",cityController.Addparamters);
+router.get("/home",cityController.createCity);
+router.get("/import",cityController.Addparamters);
 router.get("/menu",cityController.menu);
 router.get("/map",cityController.map);
 router.get("/plot",cityController.plot);

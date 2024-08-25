@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="/css/paramter.css">
 </head>
 <body>
+    <%- include ('layout/menu.ejs') -%>
     <div class="weather-container">
-        <h2>Enter Data For Sensor1 in City <%= weather.city %></h2>
+        <h2>Enter Data for City<%= weather.city %></h2>
         <form action="/weather" method="get">
+            <div class="input-group">
+                <label for="location">location</label>
+                <input type="location" id="location" name="location" placeholder="location" required>
+            </div>  
+            <div class="input-group">
+                <label for="serial">serial-sensorBox</label>
+                <input type="serial" id="serial" name="serial" placeholder="serial" required>
+            </div>
             <div class="input-group">
                 <label for="Sensor">Sensor </label>
                 <input type="text" id="sensor" name="sensor" placeholder="sensor" required>

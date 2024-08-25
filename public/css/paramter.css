@@ -7,7 +7,7 @@
 
 body {
     background-color: #e0f7fa;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -63,6 +63,10 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+a{
+    color: #dadfe4;
+    text-decoration: none;
 }
 .button-result {
     background-color: #33bb33FF;
